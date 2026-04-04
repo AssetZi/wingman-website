@@ -1,0 +1,38 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% seo %}
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+<link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
+<link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
+{% if page.url == "/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Weight Wingman",
+  "description": "{{ site.description }}",
+  "operatingSystem": "iOS, iPadOS, macOS, visionOS",
+  "applicationCategory": "HealthApplication",
+  "offers": [
+    {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "Free to download"
+    },
+    {
+      "@type": "Offer",
+      "price": "4.99",
+      "priceCurrency": "USD",
+      "description": "Monthly subscription"
+    },
+    {
+      "@type": "Offer",
+      "price": "19.99",
+      "priceCurrency": "USD",
+      "description": "Annual subscription"
+    }
+  ]
+}
+</script>
+{% endif %}

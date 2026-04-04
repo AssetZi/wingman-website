@@ -1,0 +1,28 @@
+<footer class="site-footer">
+  <div class="container footer-container">
+    <div class="footer-brand">
+      <img src="{{ '/assets/images/wingmanLogo.png' | relative_url }}" alt="Weight Wingman" width="40" height="40">
+      <p>{{ site.app.tagline }}</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="{{ '/#features' | relative_url }}">Features</a></li>
+          <li><a href="{{ '/#pricing' | relative_url }}">Pricing</a></li>
+          <li><a href="{{ site.app.app_store_url }}" target="_blank" rel="noopener">Download</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+          <li><a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom container">
+    <p>&copy; {{ 'now' | date: "%Y" }} {{ site.app.developer }}. All rights reserved.</p>
+  </div>
+</footer>

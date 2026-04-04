@@ -1,0 +1,55 @@
+# Site Settings
+title: Weight Wingman
+description: "Weight Cuts & Bulks Made Easy. Personalized meal plans, shopping lists, and AI-powered progress tracking to help you reach your fitness goals."
+url: "https://weightwingman.com"
+baseurl: ""
+lang: en
+
+# Build Settings
+markdown: kramdown
+permalink: /blog/:title/
+
+# Pagination
+paginate: 6
+paginate_path: "/blog/page:num/"
+
+# Plugins (all supported by GitHub Pages)
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-paginate
+
+# SEO Defaults
+twitter:
+  card: summary_large_image
+og_image: /assets/images/og-image.png
+
+# App-specific variables
+app:
+  name: "Weight Wingman"
+  tagline: "Weight Cuts & Bulks Made Easy"
+  app_store_url: "https://apps.apple.com/us/app/weight-wingman/id6740700573"
+  price_monthly: "$4.99"
+  price_yearly: "$19.99"
+  developer: "Zacherl Investments LLC"
+  platforms: "iPhone, iPad, Mac, and Apple Vision"
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      author: "Weight Wingman Team"
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# Exclude from build
+exclude:
+  - Gemfile.lock
+  - README.md
+  - LICENSE

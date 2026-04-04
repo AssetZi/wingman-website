@@ -1,0 +1,19 @@
+<header class="site-nav">
+  <nav class="container nav-container">
+    <a href="{{ '/' | relative_url }}" class="nav-logo">
+      <img src="{{ '/assets/images/wingmanLogo.png' | relative_url }}" alt="Weight Wingman" width="36" height="36">
+      <span>Weight Wingman</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="{{ '/#features' | relative_url }}">Features</a></li>
+      <li><a href="{{ '/#pricing' | relative_url }}">Pricing</a></li>
+      <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+      <li><a href="{{ site.app.app_store_url }}" class="btn btn-sm" target="_blank" rel="noopener">Download</a></li>
+    </ul>
+  </nav>
+</header>

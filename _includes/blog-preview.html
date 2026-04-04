@@ -1,0 +1,23 @@
+{% if site.posts.size > 0 %}
+<section class="blog-preview" id="blog">
+  <div class="container">
+    <h2 class="section-title">From the Blog</h2>
+    <p class="section-subtitle">Tips, guides, and insights to fuel your fitness journey.</p>
+    <div class="blog-grid">
+      {% for post in site.posts limit:3 %}
+      <a href="{{ post.url | relative_url }}" class="blog-card">
+        <div class="blog-card-content">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
+          <span class="read-more">Read more &rarr;</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    <div class="blog-preview-cta">
+      <a href="{{ '/blog/' | relative_url }}" class="btn btn-outline">View All Posts</a>
+    </div>
+  </div>
+</section>
+{% endif %}
