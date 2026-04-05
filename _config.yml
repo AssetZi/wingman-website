@@ -1,6 +1,6 @@
 # Site Settings
 title: Weight Wingman
-description: "Weight Cuts & Bulks Made Easy. Personalized meal plans, shopping lists, and AI-powered progress tracking to help you reach your fitness goals."
+description: "The Weight Cutting App for Wrestlers. Personalized meal plans, progress tracking, and Apple Intelligence — so you never lose a match from a bad weight cut again."
 url: "https://weightwingman.com"
 baseurl: ""
 lang: en
@@ -28,7 +28,7 @@ og_image: /assets/images/og-image.png
 # App-specific variables
 app:
   name: "Weight Wingman"
-  tagline: "Weight Cuts & Bulks Made Easy"
+  tagline: "Cutting Weight Doesn't Have to Suck"
   app_store_url: "https://apps.apple.com/us/app/weight-wingman/id6740700573"
   price_monthly: "$4.99"
   price_yearly: "$19.99"
