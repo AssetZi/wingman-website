@@ -1,0 +1,98 @@
+<section id="athletes" class="audience-section active">
+  <div class="container section-body">
+    <div class="section-head reveal">
+      <span class="eyebrow eyebrow-cut">For athletes &amp; parents</span>
+      <h2>Your cut, handled.</h2>
+    </div>
+
+    <!-- 01 — AI macro logging (video) -->
+    <div class="feature-block">
+      <div class="fb-media reveal">
+        <video class="phone-slot" src="{{ '/assets/videos/food-log.mp4' | relative_url }}" autoplay muted loop playsinline></video>
+      </div>
+      <div class="fb-copy reveal" data-delay="120">
+        <span class="fb-num">01</span>
+        <h3>Tell it what you ate. Get the macros.</h3>
+        <p>Type your meal in plain English &mdash; the AI breaks it down by food with exact calories, protein, carbs, and fat. No barcode scanning, no database scrolling.</p>
+      </div>
+    </div>
+
+    <!-- 02 — AI meal builder (video) -->
+    <div class="feature-block alt">
+      <div class="fb-copy reveal">
+        <span class="fb-num">02</span>
+        <h3>Don't know what to eat? It builds the meal.</h3>
+        <p>Describe what you want &mdash; "high-protein lunch under 600 cals" &mdash; and the AI generates a full meal with portions and macros that fit your cut. Runs on your phone, no internet needed.</p>
+      </div>
+      <div class="fb-media reveal" data-delay="120">
+        <video class="phone-slot" src="{{ '/assets/videos/meal-gen.mp4' | relative_url }}" autoplay muted loop playsinline></video>
+      </div>
+    </div>
+
+    <!-- 03 — Daily targets -->
+    <div class="feature-block">
+      <div class="fb-media reveal">
+        <img class="phone-slot" src="{{ '/assets/images/screenshots/athlete-targets.webp' | relative_url }}" alt="Weight Wingman daily calorie and water targets" loading="lazy">
+      </div>
+      <div class="fb-copy reveal" data-delay="120">
+        <span class="fb-num">03</span>
+        <h3>Your targets adjust every day.</h3>
+        <p>Calories and water goals recalculate daily based on your body, your workouts, and how many days until weigh-in &mdash; including a 5-phase water cut protocol that shifts automatically.</p>
+      </div>
+    </div>
+
+    <!-- 04 — Danger flags -->
+    <div class="feature-block alt">
+      <div class="fb-copy reveal">
+        <span class="fb-num">04</span>
+        <h3>The app knows when your cut is dangerous.</h3>
+        <p>Wingman tracks your weekly loss rate and flags you at NCAA/NFHS thresholds. If your cut crosses into unsafe territory, it tells you before your body does.</p>
+      </div>
+      <div class="fb-media reveal" data-delay="120">
+        <img class="phone-slot" src="{{ '/assets/images/screenshots/athlete-danger.webp' | relative_url }}" alt="Weight Wingman danger flag warning" loading="lazy">
+      </div>
+    </div>
+
+    <!-- 05 — Recovery mode -->
+    <div class="feature-block">
+      <div class="fb-media reveal">
+        <img class="phone-slot" src="{{ '/assets/images/screenshots/athlete-recovery.webp' | relative_url }}" alt="Weight Wingman recovery mode" loading="lazy">
+      </div>
+      <div class="fb-copy reveal" data-delay="120">
+        <span class="fb-num">05</span>
+        <h3>You made weight. Now what?</h3>
+        <p>Flip on Recovery Mode and the app tells you exactly how much to drink and eat between matches &mdash; based on how much you cut and whether you weigh in again tomorrow.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Free to start / athlete pricing -->
+  <div class="cta-panel">
+    <div class="inner">
+      <div class="cta-head reveal">
+        <h2>Free to start.</h2>
+        <p>Log weights, track water, see your progress &mdash; free. Go Pro to unlock AI meals, macro scanning, AI workouts, and recovery mode.</p>
+      </div>
+      <div class="price-grid">
+        <div class="price-card reveal">
+          <span class="eyebrow">Pro monthly</span>
+          <div class="amount-line"><span class="amount">{{ site.app.price_monthly }}</span><span class="period">/ month</span></div>
+          <p class="note">Everything Pro. Cancel anytime.</p>
+        </div>
+        <div class="price-card featured reveal" data-delay="100">
+          <div class="top">
+            <span class="eyebrow">Pro yearly</span>
+            <span class="badge badge-gain">Save 67%</span>
+          </div>
+          <div class="amount-line"><span class="amount">{{ site.app.price_yearly }}</span><span class="period">/ year</span></div>
+          <p class="note">One season, covered.</p>
+        </div>
+      </div>
+      <div class="store-cta reveal">
+        <a href="{{ site.app.app_store_url }}" class="app-store-badge" target="_blank" rel="noopener">
+          <img src="{{ '/assets/images/app-store-badge.svg' | relative_url }}" alt="Download Weight Wingman on the App Store">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
