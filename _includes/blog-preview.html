@@ -1,22 +1,22 @@
 {% if site.posts.size > 0 %}
 <section class="blog-preview" id="blog">
   <div class="container">
-    <h2 class="section-title">From the Blog</h2>
-    <p class="section-subtitle">Strategies, nutrition tips, and guides for wrestlers making weight.</p>
+    <div class="blog-preview-head reveal">
+      <div class="stack">
+        <span class="eyebrow">From the blog</span>
+        <h2>Fuel for the season.</h2>
+      </div>
+      <a href="{{ '/blog/' | relative_url }}" class="all-posts-link">All posts &rarr;</a>
+    </div>
     <div class="blog-grid">
       {% for post in site.posts limit:3 %}
-      <a href="{{ post.url | relative_url }}" class="blog-card">
-        <div class="blog-card-content">
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
-          <h3>{{ post.title }}</h3>
-          <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
-          <span class="read-more">Read more &rarr;</span>
-        </div>
+      <a href="{{ post.url | relative_url }}" class="blog-card reveal" {% if forloop.index > 1 %}data-delay="{{ forloop.index0 | times: 100 }}"{% endif %}>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.excerpt | strip_html | truncate: 130 }}</p>
+        <span class="read-more">Read &rarr;</span>
       </a>
       {% endfor %}
-    </div>
-    <div class="blog-preview-cta">
-      <a href="{{ '/blog/' | relative_url }}" class="btn btn-outline">View All Posts</a>
     </div>
   </div>
 </section>

@@ -1,18 +1,58 @@
 <section class="hero">
-  <div class="container hero-container">
+  <div class="container hero-grid">
     <div class="hero-content">
-      <h1>Weight Wingman</h1>
-      <p class="hero-tagline">{{ site.app.tagline }}</p>
-      <p class="hero-description">Stop white-knuckling your weight cuts. Weight Wingman builds you a personalized meal plan so you can make weight without draining yourself, keep your strength on the mat, and never have cottonmouth again.</p>
-      <div class="hero-actions">
+      <span class="eyebrow reveal">For wrestlers and combat athletes</span>
+      <h1 class="reveal" data-delay="80">Make weight. The&nbsp;smart&nbsp;way.</h1>
+      <p class="hero-description reveal" data-delay="160">Weight Wingman tracks your cut, builds your meals, and flags danger before it costs you a match.</p>
+      <div class="hero-cta reveal" data-delay="240">
+        <button class="btn btn-primary btn-lg" data-audience="athlete" data-scroll>I'm an athlete</button>
+        <button class="btn btn-secondary btn-lg" data-audience="coach" data-scroll>I'm a coach</button>
+      </div>
+      <div class="hero-store reveal" data-delay="320">
         <a href="{{ site.app.app_store_url }}" class="app-store-badge" target="_blank" rel="noopener">
-          <img src="{{ '/assets/images/app-store-badge.svg' | relative_url }}" alt="Download Weight Wingman on the App Store" width="200" height="60">
+          <img src="{{ '/assets/images/app-store-badge.svg' | relative_url }}" alt="Download Weight Wingman on the App Store">
         </a>
         <span class="hero-platforms">Available on {{ site.app.platforms }}</span>
       </div>
     </div>
-    <div class="hero-image">
-      <img src="{{ '/assets/images/wingmanLogo.png' | relative_url }}" alt="Weight Wingman App Icon" width="280" height="280">
+    <div class="hero-card-wrap">
+      <div class="weighin-card reveal" data-delay="200">
+        <div class="wc-head">
+          <span class="eyebrow">Today's weigh-in</span>
+          <span class="badge badge-cut">Cut</span>
+        </div>
+        <div class="wc-body">
+          <div>
+            <div class="wc-number"><span id="hero-weight-num">174.0</span><span class="unit"> lb</span></div>
+            <div class="wc-sub">-1.4 lb/wk &mdash; safe pace</div>
+          </div>
+          <div class="ring">
+            <svg width="140" height="140">
+              <circle class="track" cx="70" cy="70" r="64" stroke-width="12" fill="none"></circle>
+              <circle class="bar" cx="70" cy="70" r="64" stroke-width="12" fill="none"></circle>
+            </svg>
+            <div class="ring-label">
+              <span class="num">-6.2</span>
+              <span class="sub">to go</span>
+            </div>
+          </div>
+        </div>
+        <div class="wc-row"><span class="label">Weigh-in</span><span class="value">12 days</span></div>
+        <div class="wc-row"><span class="label">Target</span><span class="value">165.0 lb</span></div>
+      </div>
     </div>
   </div>
 </section>
+
+<div class="trust-line">
+  <p class="reveal">Built on NCAA and NFHS safety guidelines.</p>
+</div>
+
+<div id="audience" class="audience-toggle">
+  <div class="inner">
+    <div class="seg">
+      <button class="seg-btn active" data-audience="athlete">Athletes &amp; parents</button>
+      <button class="seg-btn" data-audience="coach">Coaches</button>
+    </div>
+  </div>
+</div>

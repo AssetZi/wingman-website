@@ -1,7 +1,7 @@
 <header class="site-nav">
   <nav class="container nav-container">
     <a href="{{ '/' | relative_url }}" class="nav-logo">
-      <img src="{{ '/assets/images/wingmanLogo.png' | relative_url }}" alt="Weight Wingman" width="36" height="36">
+      <img src="{{ '/assets/images/wingmanLogo.png' | relative_url }}" alt="Weight Wingman" width="34" height="34">
       <span>Weight Wingman</span>
     </a>
     <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -10,8 +10,8 @@
       <span></span>
     </button>
     <ul class="nav-links">
-      <li><a href="{{ '/#features' | relative_url }}">Features</a></li>
-      <li><a href="{{ '/#pricing' | relative_url }}">Pricing</a></li>
+      <li><a href="/#athletes" data-audience="athlete" data-scroll>Athletes</a></li>
+      <li><a href="/#coaches" data-audience="coach" data-scroll>Coaches</a></li>
       <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
       <li><a href="{{ site.app.app_store_url }}" class="btn btn-sm" target="_blank" rel="noopener">Download</a></li>
     </ul>
