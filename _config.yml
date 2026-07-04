@@ -48,6 +48,8 @@ defaults:
     values:
       layout: default
 
+theme: null
+
 # Exclude from build
 exclude:
   - Gemfile.lock
