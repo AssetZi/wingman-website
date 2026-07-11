@@ -144,3 +144,87 @@ combat athletes (MMA, BJJ, boxing — secondary net) · coaches · parents
 - Publish cadence is fine; prioritize coach-intent posts next (nothing ranks well for
   "wrestling team weight tracking app" yet): e.g. "How Coaches Track Wrestler Weight Cuts",
   "NFHS Weight Management Rules Explained", "Wrestling Weight Certification (Alpha Weigh-In) Guide".
+
+---
+
+## 5. Off-page playbook (what actually moves rankings for a young domain)
+
+1. **Coach-intent content** (in priority order — these SERPs have no real competition):
+   - "How Wrestling Coaches Track Weight Cuts (Paper Chart vs. App)"
+   - "NFHS Wrestling Weight Management Rules, Explained for Parents & Coaches"
+   - "Wrestling Weight Certification / Alpha Weigh-In Guide" (seasonal spike every November)
+   - "How Much Should a High School Wrestler Cut? A Coach's Guide"
+   End each with the coach-dashboard CTA — these readers buy the $224–$799 team plans.
+2. **Backlinks via the founder's coaching credibility** (assistant coach, Clarion):
+   - Pitch FloWrestling / WIN / Intermat / state wrestling sites: angle = "D1 coach builds
+     app that flags dangerous weight cuts using NCAA/NFHS thresholds" (safety story, not app promo)
+   - Wrestling podcasts (guest spots = backlinks), NWCA + state coaching association
+     newsletters, coaching clinics
+   - Give team plans free to 3–5 programs for a testimonial/case-study page (content + link + proof)
+   - Be the genuinely helpful answer in r/wrestling and coach Facebook groups — Reddit
+     currently ranks for the money keywords
+3. **Google Search Console**: verify domain, submit sitemap, review the Queries report monthly;
+   strengthen whatever sits on page 2–3 first.
+4. **Timeline**: long-tail wins in 4–8 weeks; primary keyword top-10 in 3–6 months with links.
+   Peak search season is October–January — publish ahead of it.
+
+---
+
+## 6. ASO rewrite (App Store Connect)
+
+Apple search indexes **name > subtitle > keyword field** (description is conversion-only).
+Never repeat a word across the three fields.
+
+- **App name (30):** `Weight Wingman: Wrestling Cut`
+- **Subtitle (30):** `Make Weight. Coach Your Team.`
+- **Keyword field (100):** `wrestler,weigh,in,macros,calorie,tracker,mma,bjj,boxing,team,roster,meal,plan,diet,water,hydration`
+- **Promotional text (170, updatable anytime):**
+  > The weight cutting app built for wrestlers. AI meal tracking, daily targets, NCAA/NFHS
+  > danger flags — and a live dashboard so coaches see every weigh-in. Free to start.
+
+### Draft description (replaces current — fixes wrong $34.99 price, adds wrestling + coach copy)
+
+> Never lose a match to a bad weight cut.
+>
+> Weight Wingman is the weight cutting app built for wrestlers — folkstyle, freestyle, and
+> greco, from youth to high school to college. It plans your cut, builds your meals, and
+> flags danger before it costs you a match.
+>
+> FOR WRESTLERS
+> • AI FOOD LOG — Type what you ate in plain English. Get exact calories, protein, carbs,
+>   and fat. No barcode scanning, no database scrolling.
+> • AI MEAL BUILDER — "High-protein lunch under 600 cals" → a full meal with portions and
+>   macros that fit your cut.
+> • DAILY TARGETS — Calorie and water goals recalculate every day toward your weigh-in,
+>   including a 5-phase water loading protocol.
+> • DANGER FLAGS — Tracks your weekly loss rate against NCAA/NFHS thresholds and warns you
+>   before your cut turns unsafe.
+> • RECOVERY MODE — Made weight? It tells you exactly how to refuel and rehydrate between
+>   matches.
+>
+> FOR COACHES
+> • Live roster dashboard — every wrestler's weight, color-coded by risk
+> • Real-time sync every time an athlete logs a weigh-in
+> • Two-tap PDF/CSV compliance export for your AD or training room
+> • Athletes join with a 6-character invite code — team set up in 5 minutes
+>
+> PRIVATE BY DESIGN
+> No account. No data collected. The AI runs on-device with Apple Intelligence — works in
+> the wrestling room, on the bus, anywhere. No internet needed.
+>
+> FREE to log weigh-ins, track water, and see progress. Wingman Pro: $4.99/month or
+> $19.99/year. Team plans from $224.99/year include Pro for every athlete.
+
+### Non-metadata ASO levers
+
+- **Ratings (3.5★/4 is the #1 conversion killer):** trigger `SKStoreReviewController.requestReview()`
+  at a win moment — the day a wrestler makes weight, or a 7-day logging streak. Target 25–30
+  ratings at 4.5+.
+- **Respond to the 1-star "can't log anything" review** in App Store Connect (public developer
+  response) and fix the onboarding gap it points to.
+- **Screenshots:** add caption text ("Tell it what you ate — get the macros", "Every wrestler's
+  weight. One screen."). Lead with danger-flag + coach-dashboard shots; add an app preview video
+  of the AI food log.
+- **IAP display names are indexed:** rename e.g. "Small Team Yearly Plan" → "Wrestling Team Plan (15)".
+- **Extra keyword fields free:** add English (UK) / (Canada) / (Australia) localizations — each
+  gets its own 100-char keyword field for the same market.
