@@ -6,6 +6,8 @@ date: 2026-04-13
 author: "Weight Wingman Team"
 categories: [weight-cutting]
 tags: [hydration, water-loading, weight-cut, strategy]
+permalink: /blog/water-loading-science-safe-weight-cuts/
+canonical_url: https://weightwingman.com/blog/water-loading-wrestling-weight-cut/
 ---
 
 You've heard it a thousand times: cut water weight and you'll tank on the mat. Your strength disappears. Your cardio suffers. You get light-headed during matches.

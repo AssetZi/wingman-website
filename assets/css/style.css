@@ -939,6 +939,61 @@ div.phone-slot {
 .footer-bottom p { font-size: 12px; color: var(--silver-faint); }
 
 /* ============================================
+   FAQ
+   ============================================ */
+.faq {
+  padding: 96px 0;
+  border-top: 1px solid var(--line-soft);
+}
+.faq .section-head { margin-bottom: 56px; }
+.faq-list {
+  max-width: 760px;
+  border-top: 1px solid var(--line-soft);
+}
+.faq-item {
+  border-bottom: 1px solid var(--line-soft);
+}
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 22px 36px 22px 0;
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--silver-bright);
+  position: relative;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--silver-dim);
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+.faq-item[open] summary::after {
+  content: "\2212";
+}
+.faq-item summary:hover { color: var(--silver); }
+.faq-item p {
+  padding: 0 0 24px;
+  max-width: 680px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--silver);
+}
+.faq-item p a {
+  color: var(--link);
+}
+.faq-item p a:hover { text-decoration: underline; }
+
+/* ============================================
    Responsive
    ============================================ */
 @media (max-width: 768px) {
@@ -977,4 +1032,7 @@ div.phone-slot {
 
   .footer-container { flex-direction: column; }
   .footer-links { gap: 40px; }
+
+  .faq { padding: 64px 0; }
+  .faq-item summary { font-size: 17px; }
 }

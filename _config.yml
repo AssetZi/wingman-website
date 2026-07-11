@@ -1,6 +1,8 @@
 # Site Settings
 title: Weight Wingman
-description: "The Weight Cutting App for Wrestlers. Personalized meal plans, progress tracking, and Apple Intelligence — so you never lose a match from a bad weight cut again."
+description: "The weight cutting app for wrestlers. AI meal tracking, daily calorie and water targets, NCAA/NFHS safety flags, and a live coach dashboard — make weight without wrecking your strength."
+tagline: "The Weight Cutting App for Wrestlers"
+logo: /assets/images/wingmanLogo.png
 url: "https://weightwingman.com"
 baseurl: ""
 lang: en
@@ -54,4 +56,6 @@ theme: null
 exclude:
   - Gemfile.lock
   - README.md
+  - README-UPDATE.md
   - LICENSE
+  - app.md
