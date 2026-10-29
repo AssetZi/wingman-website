@@ -1318,3 +1318,205 @@ div.phone-slot {
   .faq { padding: var(--space-16) 0; }
   .faq-item summary { font-size: 17px; }
 }
+
+/* ============================================
+   Landing pages (Meta test: /coach/, /cotton-mouth/, /parents/)
+   ============================================ */
+body.landing main { padding-top: 0; }
+body.landing [hidden] { display: none !important; }
+/* Wider gutters than the main site: these pages are read on a phone from an ad. */
+body.landing { --gutter: 28px; }
+body.landing .container { padding-left: max(var(--gutter), 5vw); padding-right: max(var(--gutter), 5vw); }
+
+.landing-hero {
+  position: relative;
+  padding: var(--space-20) 0 var(--space-20);
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--gradient-dusk);
+  overflow: hidden;
+}
+.landing-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 45%;
+  background: var(--scrim-bottom);
+  pointer-events: none;
+}
+.landing-hero > .container { position: relative; z-index: 1; }
+.landing-hero .hero-content { max-width: 640px; }
+.landing-hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4.75rem);
+  line-height: 1.05;
+  letter-spacing: var(--tracking-tighter);
+  font-weight: var(--fw-light);
+  margin-bottom: var(--space-6);
+  color: var(--text-primary);
+}
+.landing-hero .hero-description { margin-bottom: var(--space-8); }
+.landing-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-8);
+  font-size: 14px;
+  font-weight: var(--fw-medium);
+  color: var(--text-secondary);
+}
+.landing-brand img { width: 28px; height: 28px; }
+
+/* The one ask: the App Store button */
+.btn-xl {
+  height: 60px;
+  padding: 0 var(--space-8);
+  font-size: 18px;
+  font-weight: var(--fw-semibold);
+  gap: var(--space-3);
+  box-shadow: var(--glow-gold), var(--shadow-md);
+}
+.btn-xl .apple-mark { flex: none; margin-top: -2px; }
+.landing-cta { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-3); }
+.landing-cta .btn-xl { min-width: 300px; }
+.cta-sub { font-size: 14px; line-height: 1.5; color: var(--text-secondary); max-width: 46ch; }
+.cta-secondary {
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-decoration: underline;
+  text-decoration-color: var(--border-strong);
+  text-underline-offset: 4px;
+}
+.cta-secondary:hover { color: var(--text-primary); text-decoration-color: var(--gold-500); }
+
+/* Android footnote: small, under the button, non-iOS visitors only */
+.cta-android {
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-subtle);
+  max-width: 440px;
+}
+.android-form { display: flex; flex-direction: column; gap: var(--space-2); }
+.form-q { font-size: 13px; line-height: 1.5; color: var(--text-tertiary); }
+.form-row { display: flex; gap: var(--space-2); flex-wrap: wrap; align-items: center; }
+.android-form input[type="email"] {
+  flex: 1 1 180px;
+  height: var(--control-h-sm);
+  padding: 0 var(--space-4);
+  font: inherit;
+  font-size: 13px;
+  color: var(--text-primary);
+  background: var(--bg-inset);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-pill);
+  outline: none;
+}
+.android-form input[type="email"]::placeholder { color: var(--text-disabled); }
+.android-form input[type="email"]:focus { border-color: var(--gold-500); box-shadow: 0 0 0 3px var(--focus-ring); }
+.android-form .btn[disabled] { opacity: 0.6; cursor: wait; }
+.form-thanks { font-size: 13px; color: var(--success-text); }
+.form-err { font-size: 13px; color: var(--danger-text); }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+/* Proof blocks reuse .feature-block; only the padding differs */
+.landing-proof { padding-top: var(--space-24); }
+.landing-proof .feature-block:last-child { padding-bottom: var(--space-20); }
+
+/* One-line extras under the proof blocks */
+.landing-line { border-top: 1px solid var(--border-subtle); }
+.landing-line p {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--space-8) max(var(--gutter), 5vw);
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* Booster card (parents page, beat 3) */
+.booster-card {
+  background: var(--bg-surface-2);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 480px;
+  box-shadow: var(--shadow-md);
+}
+.booster-card .amount {
+  font-family: var(--font-mono);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-primary);
+}
+.booster-card .amount small { font-family: var(--font-sans); font-size: 14px; color: var(--text-tertiary); margin-left: var(--space-2); }
+.booster-card p { font-size: 16px; line-height: 1.6; color: var(--text-secondary); }
+
+/* Closing panel: trust, price, button again */
+.landing-close { border-top: 1px solid var(--border-subtle); background: var(--bg-surface); }
+.landing-close .inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--space-20) max(var(--gutter), 5vw);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-5);
+}
+.landing-close h2 {
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.05;
+  letter-spacing: var(--tracking-tighter);
+  font-weight: var(--fw-light);
+  color: var(--text-primary);
+}
+.landing-close .trust { font-size: 16px; line-height: 1.6; color: var(--text-secondary); max-width: 56ch; }
+.landing-close .price { font-size: 18px; color: var(--text-primary); }
+.landing-close .landing-cta { align-items: center; }
+.landing-close .cta-sub { text-align: center; }
+.landing-plans {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2) var(--space-5);
+  font-size: 13px;
+  color: var(--text-tertiary);
+  padding-top: var(--space-2);
+}
+.landing-plans li strong { color: var(--text-secondary); font-weight: var(--fw-medium); }
+
+/* Footer: business name and privacy link only */
+.landing-footer { border-top: 1px solid var(--border-subtle); }
+.landing-footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-6);
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+.landing-footer-brand { display: inline-flex; align-items: center; gap: var(--space-2); color: var(--text-secondary); font-weight: var(--fw-medium); font-size: 13px; }
+.landing-footer-brand img { width: 28px; height: 28px; }
+.landing-footer a { color: var(--text-tertiary); text-decoration: underline; text-underline-offset: 3px; }
+.landing-footer a:hover { color: var(--text-primary); }
+
+@media (max-width: 768px) {
+  .landing-hero { padding: var(--space-16) 0 var(--space-12); }
+  .landing-hero h1 { font-size: 2.4rem; }
+  .landing-proof { padding-top: var(--space-16); }
+  .landing-close .inner { padding: var(--space-16) var(--gutter); }
+  .landing-cta { align-items: stretch; }
+  .landing-cta .btn-xl { width: 100%; min-width: 0; }
+  .landing-close .landing-cta { align-items: stretch; }
+  .landing-footer-inner { flex-direction: column; align-items: flex-start; }
+}

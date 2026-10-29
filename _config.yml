@@ -37,6 +37,20 @@ app:
   developer: "Zacherl Investments LLC"
   platforms: "iPhone, iPad, Mac, and Apple Vision"
 
+# Meta test landing pages (/coach/, /cotton-mouth/, /parents/)
+# Pixel ID from Meta Events Manager. The pixel include renders nothing while this is empty.
+meta_pixel_id: ""
+# App Store Connect campaign links, one per page
+# (App Store Connect > Analytics > Acquisition > Campaigns). coach = "male", parents = "female".
+campaigns:
+  coach: "https://apps.apple.com/app/apple-store/id6740700573?pt=125547798&ct=nov-male&mt=8"
+  cotton-mouth: "https://apps.apple.com/app/apple-store/id6740700573?pt=125547798&ct=nov-cotton&mt=8"
+  parents: "https://apps.apple.com/app/apple-store/id6740700573?pt=125547798&ct=ww-nov-female&mt=8"
+# Android interest form writes to the android_interest table. Publishable key only; it can insert, never read.
+supabase:
+  url: "https://jwybnzgdqpptrtsuvxwy.supabase.co"
+  publishable_key: "sb_publishable_stST8LGT9gk5QwJMDfsp-w_Er7id8V_"
+
 # Default front matter
 defaults:
   - scope:

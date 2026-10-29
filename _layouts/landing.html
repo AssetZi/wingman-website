@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body class="landing" data-page="{{ page.campaign }}" data-supabase-url="{{ site.supabase.url }}" data-supabase-key="{{ site.supabase.publishable_key }}">
+  <main>
+    {{ content }}
+  </main>
+  {% include landing-footer.html %}
+  <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/landing.js' | relative_url }}" defer></script>
+</body>
+</html>
