@@ -11,8 +11,8 @@
   var ua = navigator.userAgent || '';
   var isIOS = /iPad|iPhone|iPod/.test(ua) ||
     (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1); // iPadOS reports as a Mac
+  // The App Store button shows for everyone. Non-iOS visitors also get the small Android line.
   if (!isIOS) {
-    document.querySelectorAll('.cta-ios').forEach(function (el) { el.hidden = true; });
     document.querySelectorAll('.cta-android').forEach(function (el) { el.hidden = false; });
   }
 
@@ -33,7 +33,7 @@
   document.querySelectorAll('.android-form').forEach(function (form) {
     var input = form.querySelector('input[type="email"]');
     var hp = form.querySelector('.hp');
-    var btn = form.querySelector('button');
+    var btn = form.querySelector('button[type="submit"]');
     var row = form.querySelector('.form-row');
     var q = form.querySelector('.form-q');
     var thanks = form.querySelector('.form-thanks');

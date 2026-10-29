@@ -1324,10 +1324,13 @@ div.phone-slot {
    ============================================ */
 body.landing main { padding-top: 0; }
 body.landing [hidden] { display: none !important; }
+/* Wider gutters than the main site: these pages are read on a phone from an ad. */
+body.landing { --gutter: 28px; }
+body.landing .container { padding-left: max(var(--gutter), 5vw); padding-right: max(var(--gutter), 5vw); }
 
 .landing-hero {
   position: relative;
-  padding: var(--space-24) 0 var(--space-20);
+  padding: var(--space-20) 0 var(--space-20);
   border-bottom: 1px solid var(--border-subtle);
   background: var(--gradient-dusk);
   overflow: hidden;
@@ -1343,13 +1346,14 @@ body.landing [hidden] { display: none !important; }
 .landing-hero > .container { position: relative; z-index: 1; }
 .landing-hero .hero-content { max-width: 640px; }
 .landing-hero h1 {
-  font-size: clamp(2.6rem, 6vw, 4.75rem);
+  font-size: clamp(2.5rem, 6vw, 4.75rem);
   line-height: 1.05;
   letter-spacing: var(--tracking-tighter);
   font-weight: var(--fw-light);
   margin-bottom: var(--space-6);
   color: var(--text-primary);
 }
+.landing-hero .hero-description { margin-bottom: var(--space-8); }
 .landing-brand {
   display: inline-flex;
   align-items: center;
@@ -1361,11 +1365,19 @@ body.landing [hidden] { display: none !important; }
 }
 .landing-brand img { width: 28px; height: 28px; }
 
-/* CTA block: App Store button, or the Android interest form in its place */
-.landing-cta { display: flex; flex-direction: column; gap: var(--space-4); }
-.cta-ios { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-3); }
-.cta-ios .btn { min-width: 220px; }
-.cta-sub { font-size: 13px; line-height: 1.6; color: var(--text-tertiary); max-width: 46ch; }
+/* The one ask: the App Store button */
+.btn-xl {
+  height: 60px;
+  padding: 0 var(--space-8);
+  font-size: 18px;
+  font-weight: var(--fw-semibold);
+  gap: var(--space-3);
+  box-shadow: var(--glow-gold), var(--shadow-md);
+}
+.btn-xl .apple-mark { flex: none; margin-top: -2px; }
+.landing-cta { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-3); }
+.landing-cta .btn-xl { min-width: 300px; }
+.cta-sub { font-size: 14px; line-height: 1.5; color: var(--text-secondary); max-width: 46ch; }
 .cta-secondary {
   font-size: 14px;
   color: var(--text-secondary);
@@ -1375,17 +1387,22 @@ body.landing [hidden] { display: none !important; }
 }
 .cta-secondary:hover { color: var(--text-primary); text-decoration-color: var(--gold-500); }
 
-.cta-android { display: flex; flex-direction: column; gap: var(--space-3); max-width: 520px; }
-.cta-note { font-size: 14px; color: var(--text-tertiary); }
-.android-form { display: flex; flex-direction: column; gap: var(--space-3); }
-.form-q { font-size: 16px; color: var(--text-secondary); }
-.form-row { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+/* Android footnote: small, under the button, non-iOS visitors only */
+.cta-android {
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-subtle);
+  max-width: 440px;
+}
+.android-form { display: flex; flex-direction: column; gap: var(--space-2); }
+.form-q { font-size: 13px; line-height: 1.5; color: var(--text-tertiary); }
+.form-row { display: flex; gap: var(--space-2); flex-wrap: wrap; align-items: center; }
 .android-form input[type="email"] {
-  flex: 1 1 220px;
-  height: var(--control-h-lg);
-  padding: 0 var(--space-5);
+  flex: 1 1 180px;
+  height: var(--control-h-sm);
+  padding: 0 var(--space-4);
   font: inherit;
-  font-size: 16px;
+  font-size: 13px;
   color: var(--text-primary);
   background: var(--bg-inset);
   border: 1px solid var(--border-default);
@@ -1395,8 +1412,8 @@ body.landing [hidden] { display: none !important; }
 .android-form input[type="email"]::placeholder { color: var(--text-disabled); }
 .android-form input[type="email"]:focus { border-color: var(--gold-500); box-shadow: 0 0 0 3px var(--focus-ring); }
 .android-form .btn[disabled] { opacity: 0.6; cursor: wait; }
-.form-thanks { font-size: 16px; color: var(--success-text); }
-.form-err { font-size: 14px; color: var(--danger-text); }
+.form-thanks { font-size: 13px; color: var(--success-text); }
+.form-err { font-size: 13px; color: var(--danger-text); }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 .sr-only {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
@@ -1412,7 +1429,7 @@ body.landing [hidden] { display: none !important; }
 .landing-line p {
   max-width: 720px;
   margin: 0 auto;
-  padding: var(--space-8) var(--gutter);
+  padding: var(--space-8) max(var(--gutter), 5vw);
   text-align: center;
   font-size: 18px;
   line-height: 1.6;
@@ -1445,7 +1462,7 @@ body.landing [hidden] { display: none !important; }
 .landing-close .inner {
   max-width: 720px;
   margin: 0 auto;
-  padding: var(--space-20) var(--gutter);
+  padding: var(--space-20) max(var(--gutter), 5vw);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1461,7 +1478,7 @@ body.landing [hidden] { display: none !important; }
 }
 .landing-close .trust { font-size: 16px; line-height: 1.6; color: var(--text-secondary); max-width: 56ch; }
 .landing-close .price { font-size: 18px; color: var(--text-primary); }
-.landing-close .landing-cta, .landing-close .cta-ios, .landing-close .cta-android { align-items: center; }
+.landing-close .landing-cta { align-items: center; }
 .landing-close .cta-sub { text-align: center; }
 .landing-plans {
   list-style: none;
@@ -1498,7 +1515,8 @@ body.landing [hidden] { display: none !important; }
   .landing-hero h1 { font-size: 2.4rem; }
   .landing-proof { padding-top: var(--space-16); }
   .landing-close .inner { padding: var(--space-16) var(--gutter); }
-  .cta-ios .btn, .android-form .btn { width: 100%; }
-  .form-row { flex-direction: column; }
+  .landing-cta { align-items: stretch; }
+  .landing-cta .btn-xl { width: 100%; min-width: 0; }
+  .landing-close .landing-cta { align-items: stretch; }
   .landing-footer-inner { flex-direction: column; align-items: flex-start; }
 }
