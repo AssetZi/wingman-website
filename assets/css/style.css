@@ -645,6 +645,8 @@ ul { list-style: none; }
   object-fit: cover;
   display: block;
 }
+/* Athlete captures are raw screens with the status bar cropped (1260:2546). */
+#athletes .phone-slot { height: 586px; }
 div.phone-slot {
   display: flex;
   align-items: center;
@@ -1308,6 +1310,7 @@ div.phone-slot {
   .fb-copy p { font-size: 17px; }
 
   .phone-slot { height: 560px; width: 258px; }
+  #athletes .phone-slot { height: 521px; }
 
   .footer-container { flex-direction: column; }
   .footer-links { gap: var(--space-10); }
