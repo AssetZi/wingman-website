@@ -1,0 +1,23 @@
+{%- assign link = site.campaigns[page.campaign] -%}
+{%- assign cta_id = include.id | default: "cta" -%}
+<div class="landing-cta">
+  <div class="cta-ios">
+    <a class="btn btn-primary btn-lg js-appstore" href="{{ link }}" data-page="{{ page.campaign }}">{{ page.cta_label }}</a>
+    {% if page.cta_sub %}<p class="cta-sub">{{ page.cta_sub }}</p>{% endif %}
+    {% if page.cta_secondary %}<a class="cta-secondary js-appstore" href="{{ link }}" data-page="{{ page.campaign }}">{{ page.cta_secondary }}</a>{% endif %}
+  </div>
+  <div class="cta-android" hidden>
+    <p class="cta-note">Weight Wingman is on iPhone today.</p>
+    <form class="android-form" novalidate>
+      <p class="form-q" id="{{ cta_id }}-q">Interested in an Android version? Leave your email.</p>
+      <div class="form-row">
+        <label class="sr-only" for="{{ cta_id }}-email">Email</label>
+        <input id="{{ cta_id }}-email" type="email" name="email" inputmode="email" autocomplete="email" required placeholder="you@example.com" aria-describedby="{{ cta_id }}-q">
+        <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn-primary btn-lg" type="submit">Leave my email</button>
+      </div>
+      <p class="form-thanks" hidden>Got it. If an Android version ships, that is the only thing we will email you about.</p>
+      <p class="form-err" hidden>That did not go through. Check the address and try again.</p>
+    </form>
+  </div>
+</div>
